@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site for dogs</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<body>
+   <header class="primary-header container group"> <!--group применил clerfix к float-->
+      <section class="container">
+        <h1 class="logo">
+       <a href="index.html">Великолепие<br>самоедов</a>
+       </h1>
+       </section> 
+    <h3 class="tagline">
+        Ох уж эти самоеды! Слоган by Tihan
+    </h3>
+    <nav class="nav primary-nav">
+    <ul>
+        <li><a href="index.html">Главная</a></li><!--
+--><li><a href="pitomec.html">Питомцы</a></li><!--
+--><li><a href="vistavki.html">Выставки</a></li><!--
+--><li><a href="pitomniki.html">Питомники</a></li><!--
+--><li><a href="register.html">Регистрация</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section class="row-alt">
+    <div class="hero container">
+        <h1>Питомцы наших друзей!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore temporibus suscipit numquam doloribus voluptatibus laboriosam necessitatibus cupiditate iure tenetur minima molestiae consequaturo.</p>
+        <a class="btn btn-alt" href="register.html">Присоединяйтесь к нам!</a>
+    </div>
+    </section>
+    <section class="row">   <!--определяет фон-->
+        <div class="grid">  <!--делает разделение на таблицы -->
+           <section class="col-2-3">
+            <h2>Зарегестрируйтесь на выставку сейчас!</h2> 
+            <h5>Всего за 33$</h5>  
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum repellat, voluptatem voluptatibus aspernatur dolores iste distinctio officia fuga sapiente molestiae reiciendis optio adipisci explicabo eum.</p>
+            <ul class="spisok">
+                <li>Это весело!</li>
+                <li>Стильно, модно!</li>
+                <li>Молодежно!!!</li>
+            </ul>
+           </section><!--
+           --><form class="col-1-3">
+ <fieldset class="register-group">   <!--группирует поля формы в организованные разделы.-->
+ <label>      <!--содержит подписи или заголовки для управления формой, однозначно связывая их вместе-->
+    Имя
+ <input type="text" name="name" placeholder="Полное имя" required>  
+ <!--placeholder Выводит текст внутри поля формы, который исчезает при получении фокуса.*/
+ /*required элемент формы должен содержать значение при отправке на сервер-->
+</label>
+                   <label>
+                       Email
+                       <input type="email" name="email" placeholder="Адрес почты" required>
+                   </label>
+                   <label>
+                       Число билетов:
+                       <select name="quantity" required>
+                           <option value="1" selected>Один</option>
+                           <option value="2">Два</option>
+                           <option value="3">Три</option>
+                           <option value="4">Чытыры</option>
+                       </select>
+                   </label>
+                   <label>
+                       Оставьте Ваш комментарий:
+                       <textarea name="comments"></textarea>
+                   </label>
+               </fieldset>
+               <input class="btn btn-default" type="submit" value="Заказать">
+               
+           </form>
+           
+        </div>
+    </section>
+    <footer class="primary-footer container group">
+    <nav class="nav">
+      <ul>
+   <li><a href="index.html">Главная</a></li><!--
+--><li><a href="pitomec.html">Питомцы</a></li><!--
+--><li><a href="vistavki.html">Выставки</a></li><!--
+--><li><a href="pitomniki.html">Питомники</a></li><!--
+--><li><a href="register.html">Регистрация</a></li>
+      </ul>
+    </nav>
+    <small>&copy;A.V.Tihanovich</small>
+    </footer>
+    
+</body>
+</html>

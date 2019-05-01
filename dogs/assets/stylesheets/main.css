@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+Сетка, макет сайта
+*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /*border-box изменяет блочную модель так, чтобы любые значения свойств border или padding включались внутри width и height элемента. */
+    -moz-box-sizing: border-box;    /*-webkit- -moz- являются вендорными префиксами*/
+    box-sizing: border-box;
+    }
+.container {
+    padding-left: 30px;    /*отступ слева*/
+    padding-right: 30px;   /*отступ справа*/
+    }
+.grid, .container { /*чтобы сделать общую ширину и не сумировать padding в элементах*/
+    margin: 0 auto;        /*margin как auto с width позволяет автоматически выставить равные левые и правые поля для элемента*/
+    width: 960px;          /*ширина класа .container*/
+}
+.col-1-3 {
+    width: 33.33%;
+}
+.col-2-3 {
+    width: 66.66%;
+}
+.col-1-3, .col-2-3 {
+    display: inline-block; /*отображаются как строчно-блочные элементы*/
+    vertical-align: top;   /*вертикальное выравнивание по верхнему краю*/
+}
+.grid, .col-1-3, .col-2-3 { /*grid сетка - уроавновесит пространство между столбцами*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*
+------------------------------
+Сlearfix очищает все обтекаемые элементы внутри элемента с классом group и возвращает документ в обычный поток.
+------------------------------
+*/
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+.group::after {
+  clear: both; /*очищает все float (левые и правые не лягут поверх центрольного и тп)*/
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+/*
+Полосы
+*/
+.row {
+    background: #fff;
+    min-width: 960px;/*row всегда БОЛЬШЕ,чем width у элементов container или grid чтобы от края до края*/
+    padding: 66px 0 44px 0;
+}
+.row, .row-alt {
+    min-width: 960px;
+}
+.row-alt {
+    background: #63ede6;
+    background: -webkit-linear-gradient(to right, #63ede6, #eef26f);
+    background: -moz-linear-gradient(to right, #63ede6, #eef26f);
+    background: linear-gradient(to right, #63ede6, #eef26f);         /*Линейный градиент*/
+    padding: 44px 0 22px 0;
+}
+/*
+Основной заголовок
+*/
+.logo {
+    font-size: 48px;                /*Размер шрифта*/
+    line-height: 44px;              /*Межстрочный интервал*/
+    float: left;                    /*прижали в лево*/
+    border-top: 4px solid #648880;  /*сделали границы*/
+    padding: 40px 0 22px 0;         /*вертикальный отступ*/
+    font-weight: 100;               /*сделали текст тоньше*/
+    text-transform: uppercase;      /*сделали буквы зашлавными*/
+    letter-spacing:  .5px           /*расстояние между буквами увеличено*/
+}
+.tagline {
+  margin: 66px 0 22px 0;             /*Смещение логотипа по вертикали чуть ниже изза увеличения межстрочного интервала*/
+  text-align: right; /*выравнивание текста по правому краю*/
+}
+.primary-nav {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;  /*межбеквенное расстояние увеличено*/
+    text-transform: uppercase; /*делает верхним регистром*/
+}
+/*
+Подвал (работа и настройка)
+*/
+.primary-footer small {
+    float: left;
+    font-weight: 400;
+}
+.primary-footer {
+    color: #648880;
+    font-size: 14px;
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
+/*
+Типографика, работа с текстом
+*/
+h1, h3, h4, h5, p {
+    margin-bottom: 22px; /*величина нижнего отступа*/
+}
+h1, h2, h3, h4 {
+    color: #648880;
+}
+h1 {
+    font-size: 36px;    /*Размер шрифта*/
+    line-height: 44px;  /*Межстрочный интервал*/
+}
+h2 {
+    font-size: 24px;    /*Размер шрифта*/
+    line-height: 44px;  /*Межстрочный интервал*/
+}
+h3 {
+    font-size: 21px;    /*Размер шрифта*/
+    }
+h4 {
+    font-size: 18px;    /*Размер шрифта*/
+  }
+h5 {
+    text-transform: uppercase; /*все h5 в верхнем регистре*/
+    color: #a9b2b9;
+    font-size: 14px;
+    font-weight: 400;   /*Выделение толщиной (жирность/вес)*/
+}
+strong {
+  font-weight: 400;
+}
+cite, em {
+  font-style: italic;  /*курсив наклонный*/
+}
+/*     Вступление     */
+.lead {
+    text-align: center;
+}
+.lead p {
+    font-size: 21px;
+    line-height: 33px;
+}
+/*
+Пользовательские стили текста
+*/
+body {
+    background: #293f50;
+    color:#888;
+    font: 100 16px/22px "Lobster", cursive, "open sans", "helvetica neue", helvetica, arial, sans-serif; 
+       /* жирность размер/межстрочный шрифт,шрифт,шрифт   (font-weight, font-size, line-height и font-family)*/
+}
+/*стиль навигации*/
+.nav {
+    text-align: right;
+}
+.nav li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+}
+.nav li:last-child {
+    margin-right: 0;
+}
+/*
+Кнопки (вид и работа)
+*/
+.btn {
+    border-radius: 5px;     /*радиус границы, позволяет закруглять углы элемента*/
+    color: #fff;
+    cursor: pointer;        /*тип курсора при наведении*/
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block;  /*отображение содержимого*/
+    margin: 0;              /*т.к. inline-block отступ нам не нужен*/
+}
+.btn-alt {
+    border: 1px solid #fff;  /*рамка 1 пиксель серого цвета*/
+    padding: 10px 30px;        /*отступ от края рамки внутрь 10 верх низ, 30 лево-право*/
+}
+.btn-alt :hover {
+    background: #fff;
+    color: #648880;
+}
+.btn-default {
+    border: 0;
+    background: #648880;
+    padding: 11px 30px;
+    font-size: 14px;
+}
+.btn-default:hover {
+    background: #eef26f;
+}
+/*
+Ссылки
+*/
+a{
+    color: #648880;
+    text-decoration: none; /*удалениe подчёркивания*/
+}
+a:hover {    
+    color: #a9b2b9;        /*цвет ссылки при наведении курсора*/
+}
+p a {
+    border-bottom: 1 px solid #dfe2e5;
+}
+.primary-header a, .primary-footer a {
+    color: #fff;
+}
+.primary-header a:hover, .primary-footer a:hover {
+    color: #648880;
+}
+/*
+Главная страница (стили и настройки)
+*/
+.hero {
+    color: #fff;
+    line-height: 44px;
+    padding: 22px 80px 66px 80px; /*отступы со всех сторон*/
+    text-align: center;
+}
+.hero h2 {
+    font-size: 36px;
+}
+.hero p {
+    font-weight: 100;
+    font-size: 24px;
+}
+.teaser a:hover h3 {
+    color: #a9b2b9;
+}
+.teaser img {
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 22px;
+    max-width: 100%;
+}
+/*
+====================================================================
+ПИТОМЦЫ
+====================================================================
+*/
+.pitomec-info {
+    border: 1px solid #dfe2e5;  /*рамка 1px*/
+    border-radius: 5px;        /*закругление углов*/
+    margin-top: 88px;          /*отступ от границы вверх*/
+    padding-bottom: 22px;         /*внутренний отступ слева*/
+    text-align: center;
+    
+    }
+.pitomec {
+    margin-bottom: 44px; /*нижний отступ*/
+}
+.pitomec-info img {
+    border-radius: 50%;
+    height: 130px;
+    margin: -88px 0 22px 0;
+    vertical-align: top;
+}
+/*
+===========================================================
+РАСПИСАНИЕ
+===========================================================
+*/
+table {
+    width: 100%;
+    margin-bottom: 44px;
+    
+}
+table:last-child {
+    margin-bottom: 0;
+}
+td, th {
+    padding-bottom: 22px;
+    vertical-align: top;
+}
+th {
+    padding-right: 45px;
+    text-align: right;
+    width: 20%;
+}
+td {
+    width: 40%;
+}
+thead {
+    line-height: 44px;
+}
+thead th {
+    color: #648880;
+    font-size: 24px;
+}
+tbody th {
+    color: #a9b2b9;
+    font-size: 14px;
+    font-weight: 100;
+    padding-top: 22px;
+    text-transform: uppercase;
+}
+tbody td {
+    border-top: 1px solid #dfe2e5;
+    padding-top: 21px;
+}
+tbody td:first-of-type{
+    padding-right: 15px;
+    }
+tbody td:last-child {
+    padding-left: 15px;
+}
+tbody td:only-of-type {
+    padding-left: 0;
+    padding-right: 0;
+      }
+thead td:only-of-type {  /*выберет элемент, только если это элемент данного типа в родительском элементе.*/
+    text-align: center;
+    width: 80%;
+}
+table a {
+    color: #888;
+    }
+table h4 {
+    margin-bottom: 0;
+}
+.schedule-offset {
+    color: #a9b2b9;
+}
+/*
+================================================
+ВЫСТАВКИ
+================================================
+*/
+.mesto {
+    margin-bottom: 66px;
+    
+}
+.otel {
+    margin-bottom: 22px;
+}
+.venue-map {
+   height: 130px; 
+}
+/*
+================================================
+Регистрация
+================================================
+*/
+.spisok {
+    list-style: square;
+    margin: 0 0 22px 30px;
+}
+form {
+    margin-bottom: 22px; 
+}
+input, select, textarea {
+    font: 100 16px/22px "Lobster", cursive, "open sans", "helvetica neue", helvetica, arial, sans-serif; 
+}
+.register-group label {
+    color: #648880;
+    cursor: pointer;
+    font-weight: 100;
+}
+.register-group input, 
+.register-group select, 
+.register-group textarea {
+    border: 1px solid #c6c9cc;
+    border-radius: 5px;
+    color: #888;
+    display: block;
+    margin: 5px 0 27px 0;
+    padding: 5px 8px;
+}
+.register-group input,
+.register-group textarea {
+    width: 100%;
+}
+.register-group select {
+    height: 34px;
+    width: 110px;
+}
+.register-group textarea {
+    height: 78px;
+}
